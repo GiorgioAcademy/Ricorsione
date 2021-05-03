@@ -33,6 +33,9 @@ namespace Ricorsione
             //    return 1;
             //return n * FattRicorsivo(n - 1);
 
+            // Commento aggiunto nel branch SoloRicorsiva
+            // Secondo commento
+
             return n == 0 ? 1 : n * FattRicorsivo(n - 1);
         }
 
