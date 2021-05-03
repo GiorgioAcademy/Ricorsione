@@ -4,28 +4,6 @@ namespace Ricorsione
 {
     class Program
     {
-        static long Fattoriale(int n)   // Fattoriale è una funzione
-        {
-            long f = 1;
-
-            while (n > 0)
-                f *= n--;
-
-            return f;
-        }
-
-        // n! = n * (n - 1) * (n - 2) ..... * 1
-
-        //      1 se n == 0    
-        // n! = 
-        //      n * (n - 1)! altrimenti
-
-        // 5! = 5 * 4!
-        // 4! = 4 * 3!
-        // 3! = 3 * 2!
-        // 2! = 2 * 1!
-        // 1! = 1 * 0!
-        // 0! = 1
 
         static long FattRicorsivo(int n)
         {
@@ -42,15 +20,15 @@ namespace Ricorsione
         //                          1
 
         // a ^ b = a * a * a ... b volte
-        static int Eleva(int a, int b)
-        {
-            int p = 1;
+        //static int Eleva(int a, int b)
+        //{
+        //    int p = 1;
 
-            while (b-- > 0)   //for (int i = 0; i < b; i++)
-                p *= a;
+        //    while (b-- > 0)   //for (int i = 0; i < b; i++)
+        //        p *= a;
 
-            return p;
-        }
+        //    return p;
+        //}
 
         // una parola è palindroma... se ha al massimo 1 carattere
         // oppure
@@ -99,40 +77,10 @@ namespace Ricorsione
         // restituisce l'ennesimo numero della serie di fibonacci
         // 0 1 1 2 3 5 8 13 21 34 55 89 144
         // 0 1 2 3 4 5 6 7  8  9  10 11 12
-        static int Fibonacci(int n)
-        {
-            int a = 0;
-            int b = 1;
-
-            if (n == 0)
-                return a;
-            if (n == 1)
-                return b;
-
-            int c = a + b;  // calcolo il primo valore della serie
-
-            for (int i = 2; i < n; i++)
-            {
-                a = b;
-                b = c;
-                c = a + b;
-            }
-
-            return c;
-        }
 
         static int FiboRic(int n)
         {
             return n <= 1 ? n : FiboRic(n - 2) + FiboRic(n - 1);
-        }
-
-        static void FunzioneCheFaSoloDanni()
-        {
-            int x, y, z;    // allocati nello stack
-
-            int[] a = new int[100000];  // l'array allocato nell'heap
-
-            // FunzioneCheFaSoloDanni();
         }
 
         static void Main(string[] args)
